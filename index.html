@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Type - Word Game</title>
+    <link href="main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="start-screen">
+		<h1>type</h1>
+		<button id="btn-start">Start Game</button>
+		<p class="start-hi-score">Hi-Score: <span class="hi-score">00000</span></p>
+	</div>
+    <div id="play-screen" class="notActive">
+	    <header class="scoreBoard" >
+			<ul>
+				<li>LEVEL: <span id="scoreBoard-level">01</span></li>
+				<li>SCORE: <span id="scoreBoard-points">000000</span></li>
+				<li>LIVES: <span id="scoreBoard-lives">00</span></li>
+			</ul>
+		</header>
+		<div class="play-area">
+			<div>
+				<input id="in" type="text" autofocus>
+				<label id="answer"></label>
+				<div class="information">
+					<svg id="clock" viewbox="0 0 100 100">
+						<path id="bar" transform="translate(50, 50)"/>
+					</svg>
+				
+					<p id="feedback"></p>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div id="gameover-screen" class="notActive">
+		<p class="gameover-header" >Game Over</p>
+		<p class="gameover-hi-score">
+			<span class="new-hi-score notActive">NEW </span>
+			Hi-Score: 
+			<span class="hi-score">00000</span>
+		</p>
+		<p class="gameover-score">Score: <span id="final-score">00000</span></p>
+		<button id="btn-playAgain" onclick="console.log('test')">Play Again</button>
+	</div>
+	
+    <script src="game.js"></script>
+    <script> 
+        game = new TypingGame();
+    </script>
+</body>
+</html>
