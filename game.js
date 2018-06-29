@@ -41,6 +41,7 @@ const TypingGame = function(){
 //=================================================================//
 	const EVENT = {
 		START_GAME: function(){
+			Time.setTimer(STARTING_TIME);
 			player = Object.create(Player);
 			player.init();
 			Scoreboard.update();
